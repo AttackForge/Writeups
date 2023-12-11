@@ -6,7 +6,13 @@ A Writeup is a definition of a vulnerability, which at a minimum consists of:
 - Description
 - Remediation Recommendation
 
-Writeups can have many more fields, including custom fields.
+Writeups can have many more fields, such as: 
+- Attack Scenario
+- Exploitability
+- Severity
+- Tags
+- Custom Tags
+- Custom Fields
 
 Writeups can also be assigned to libraries, along with access controls, to make managing your writeups easier.
 
