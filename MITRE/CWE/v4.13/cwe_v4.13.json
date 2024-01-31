@@ -15,28 +15,7 @@
         "import_source_id": "520",
         "description": "Allowing a .NET application to run at potentially escalated levels of access to the underlying operating and file systems can be dangerous and result in various forms of attacks.<br/><br/>.NET server applications can optionally execute using the identity of the user authenticated to the client. The intention of this functionality is to bypass authentication and access control checks within the .NET application code. Authentication is done by the underlying web server (Microsoft Internet Information Service IIS), which passes the authenticated token, or unauthenticated anonymous token, to the .NET application. Using the token to impersonate the client, the application then relies on the settings within the NTFS directories and files to control access. Impersonation enables the application, on the server running the .NET application, to both execute code and access resources in the context of the authenticated and authorized user.",
         "attack_scenario": "Scope: Access Control<br/>Impact: Gain Privileges or Assume Identity",
-        "remediation_recommendation": "Mitigation Phase: Operation<br/>Description: Run the application with limited privilege to the underlying operating and file system.",
-        "secdim_sandbox": {
-          "title": "Weak Password",
-          "slug": "weak-password",
-          "sandboxes": [
-            {
-              "id": 160,
-              "language": "python",
-              "technologies": []
-            },
-            {
-              "id": 225,
-              "language": "java",
-              "technologies": []
-            },
-            {
-              "id": 223,
-              "language": "javascript",
-              "technologies": []
-            }
-          ]
-        }
+        "remediation_recommendation": "Mitigation Phase: Operation<br/>Description: Run the application with limited privilege to the underlying operating and file system."
     },
     {
         "tags":
@@ -17697,7 +17676,28 @@
         "likelihood_of_exploitation": 8,
         "description": "The use of password systems as the primary means of authentication may be subject to several flaws or shortcomings, each reducing the effectiveness of the mechanism.<br/><br/>Password systems are the simplest and most ubiquitous authentication mechanisms. However, they are subject to such well known attacks,and such frequent compromise that their use in the most simple implementation is not practical.",
         "attack_scenario": "Scope: Access Control<br/>Impact: Bypass Protection Mechanism, Gain Privileges or Assume Identity<br/>Note: A password authentication mechanism error will almost always result in attackers being authorized as valid users.",
-        "remediation_recommendation": "Mitigation Phase: Architecture and Design<br/>Description: In order to protect password systems from compromise, the following should be noted:<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Use a zero-knowledge password protocol, such as SRP.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Ensure that passwords are stored safely and are not reversible.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Implement password aging functionality that requires passwords be changed after a certain point.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Use a mechanism for determining the strength of a password and notify the user of weak password use.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Inform the user of why password protections are in place, how they work to protect data integrity, and why it is important to heed their warnings."
+        "remediation_recommendation": "Mitigation Phase: Architecture and Design<br/>Description: In order to protect password systems from compromise, the following should be noted:<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Use a zero-knowledge password protocol, such as SRP.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Ensure that passwords are stored safely and are not reversible.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Implement password aging functionality that requires passwords be changed after a certain point.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Use a mechanism for determining the strength of a password and notify the user of weak password use.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Inform the user of why password protections are in place, how they work to protect data integrity, and why it is important to heed their warnings.",
+        "secdim_sandbox": {
+          "title": "Weak Password",
+          "slug": "weak-password",
+          "sandboxes": [
+            {
+              "id": 160,
+              "language": "python",
+              "technologies": []
+            },
+            {
+              "id": 225,
+              "language": "java",
+              "technologies": []
+            },
+            {
+              "id": 223,
+              "language": "javascript",
+              "technologies": []
+            }
+          ]
+        }
     },
     {
         "tags":
@@ -18304,7 +18304,28 @@
         "import_source_id": "521",
         "description": "The product does not require that users should have strong passwords, which makes it easier for attackers to compromise user accounts.<br/><br/>Authentication mechanisms often rely on a memorized secret (also known as a password) to provide an assertion of identity for a user of a system. It is therefore important that this password be of sufficient complexity and impractical for an adversary to guess. The specific requirements around how complex a password needs to be depends on the type of system being protected. Selecting the correct password requirements and enforcing them through implementation are critical to the overall success of the authentication mechanism.",
         "attack_scenario": "Scope: Access Control<br/>Impact: Gain Privileges or Assume Identity<br/>Note: An attacker could easily guess user passwords and gain access user accounts.",
-        "remediation_recommendation": "Mitigation Phase: Architecture and Design<br/>Description: A product's design should require adherance to an appropriate password policy. Specific password requirements depend strongly on contextual factors, but it is recommended to contain the following attributes:<br/><br/>Depending on the threat model, the password policy may include several additional attributes.<br/><br/>See NIST 800-63B [REF-1053] for further information on password requirements.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Consider a second         authentication factor beyond the password, which prevents the         password from being a single point of failure. See CWE-308 for         further information.<br/><br/>Mitigation Phase: Implementation<br/>Description: Consider implementing a password complexity meter to inform users when a chosen password meets the required attributes.<br/><br/>Detection Method: Automated Static Analysis<br/>Description: Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)<br/>Effectiveness: High"
+        "remediation_recommendation": "Mitigation Phase: Architecture and Design<br/>Description: A product's design should require adherance to an appropriate password policy. Specific password requirements depend strongly on contextual factors, but it is recommended to contain the following attributes:<br/><br/>Depending on the threat model, the password policy may include several additional attributes.<br/><br/>See NIST 800-63B [REF-1053] for further information on password requirements.<br/><br/>Mitigation Phase: Architecture and Design<br/>Description: Consider a second         authentication factor beyond the password, which prevents the         password from being a single point of failure. See CWE-308 for         further information.<br/><br/>Mitigation Phase: Implementation<br/>Description: Consider implementing a password complexity meter to inform users when a chosen password meets the required attributes.<br/><br/>Detection Method: Automated Static Analysis<br/>Description: Automated static analysis, commonly referred to as Static Application Security Testing (SAST), can find some instances of this weakness by analyzing source code (or binary/compiled code) without having to execute it. Typically, this is done by building a model of data flow and control flow, then searching for potentially-vulnerable patterns that connect \"sources\" (origins of input) with \"sinks\" (destinations where the data interacts with external components, a lower layer such as the OS, etc.)<br/>Effectiveness: High",
+        "secdim_sandbox": {
+          "title": "Weak Password",
+          "slug": "weak-password",
+          "sandboxes": [
+            {
+              "id": 160,
+              "language": "python",
+              "technologies": []
+            },
+            {
+              "id": 225,
+              "language": "java",
+              "technologies": []
+            },
+            {
+              "id": 223,
+              "language": "javascript",
+              "technologies": []
+            }
+          ]
+        }
     },
     {
         "tags":
