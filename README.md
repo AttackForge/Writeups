@@ -22,8 +22,8 @@ This repository provides industry knowledgebases you can import into your Attack
 The following methodologies are supported:
 
 ## MITRE
-- [MITRE CWE Version 4.13](https://github.com/AttackForge/Writeups/blob/main/MITRE/CWE/v4.13/cwe_v4.13.json)
-- [MITRE CAPEC Version 3.9](https://github.com/AttackForge/Writeups/blob/main/MITRE/CAPEC/v3.9/capec_v3.9.json)
+- [MITRE CWE Version 4.16](https://github.com/AttackForge/Writeups/blob/main/MITRE/CWE/mitre_cwe_v4.16.json)
+- [MITRE CAPEC Version 3.9](https://github.com/AttackForge/Writeups/blob/main/MITRE/CAPEC/mitre_capec_v3.9.json)
 - [MITRE ATT&CK Enterprise Version 16.1](https://github.com/AttackForge/Writeups/blob/main/MITRE/ATT&CK/Enterprise/mitre_attack_enterprise_16_1.json) - see [recommended mapping](https://support.attackforge.com/attackforge-enterprise/modules/test-suite-builder#import-mappings)
 - [MITRE ATT&CK ICS Version 16.1](https://github.com/AttackForge/Writeups/blob/main/MITRE/ATT&CK/ICS/mitre_attack_ics_16_1.json) - see [recommended mapping](https://support.attackforge.com/attackforge-enterprise/modules/test-suite-builder#import-mappings)
 - [MITRE ATT&CK Mobile Version 16.1](https://github.com/AttackForge/Writeups/blob/main/MITRE/ATT&CK/Mobile/mitre_attack_mobile_16_1.json) - see [recommended mapping](https://support.attackforge.com/attackforge-enterprise/modules/test-suite-builder#import-mappings)
