@@ -30,10 +30,10 @@ The following methodologies are supported:
 - [MITRE ATLAS Version 4.8.0](https://github.com/AttackForge/Writeups/blob/main/MITRE/ATLAS/mitre_atlas_4.8.0_writeups.json)
 
 ## MITRE CWE
-- [MITRE CWE Version 4.16](https://github.com/AttackForge/Writeups/blob/main/MITRE/CWE/mitre_cwe_v4.16.json)
+- [MITRE CWE Version 4.20](https://github.com/AttackForge/Writeups/blob/main/MITRE/CWE/mitre_cwe_v4.20.json)
 
 ## MITRE CAPEC
-- [MITRE CAPEC Version 3.9](https://github.com/AttackForge/Writeups/blob/main/MITRE/CAPEC/mitre_capec_v3.9.json)
+- [MITRE CAPEC Version 3.9](https://github.com/AttackForge/Writeups/blob/main/MITRE/CAPEC/mitre_capec_v3.9.0.json)
 
 You can import these knowledgebases into your Writeups libraries as follows:
 
